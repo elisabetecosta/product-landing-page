@@ -19,6 +19,7 @@
 body {
     background-color: var(--background-color);
     color: var(--main-color);
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -54,7 +55,7 @@ li {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 50px;
+    margin: 50px auto;
 }
 
 .container {
@@ -65,6 +66,7 @@ li {
 
 .features-container {
     display: flex;
+    margin: 25px auto;
 }
 
 #features .icon {
@@ -81,4 +83,29 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#howItWorks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video {
+    margin: 50px auto;
+}
+
+#pricing {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px auto;
+}
+
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer {
+    text-align: right;
 }
