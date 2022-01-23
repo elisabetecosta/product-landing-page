@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
-    --text-color: #ffffff;
     --background-color: #EEEEEE;
+    --no-access-color: rgb(133, 133, 133);
     --main-color: #1F2937;
     --accent-color: #2E91F7;
     
@@ -20,13 +20,19 @@ body {
     background-color: var(--background-color);
     color: var(--main-color);
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--main-color);
+    padding: 10px 50px;
+    margin-bottom: 50px;
 }
 
 #header-img {
@@ -41,12 +47,23 @@ menu {
 
 li {
     list-style: none;
+}
+
+header li, footer li {
     margin-right: 10px;
 }
 
 .nav-link {
-    color: var(--text-color);
+    color: var(--background-color);
     text-decoration: none;
+}
+
+li a {
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 #hero {
@@ -55,7 +72,38 @@ li {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 50px auto;
+    margin-top: 50px;
+}
+
+h1, h2 {
+    font-size: 1.5rem;
+}
+
+#email {
+    font-family: inherit;
+    height: 30px;
+    min-width: 200px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.button {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 2px;
+    margin: 10px auto;
+}
+
+.button:hover {
+    background-color: white;
+    color: var(--accent-color);
+    outline: 2px solid var(--accent-color);
 }
 
 .container {
@@ -66,7 +114,11 @@ li {
 
 .features-container {
     display: flex;
-    margin: 25px auto;
+    margin-top: 25px;
+}
+
+#features {
+    padding: 50px;
 }
 
 #features .icon {
@@ -85,20 +137,77 @@ li {
     justify-content: center;
 }
 
+@media only screen and (max-width: 600px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #features .description {
+        align-items: center;
+        text-align: justify;
+    }
+}
+
 #howItWorks {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #video {
-    margin: 50px auto;
+    max-width: 664px;
+    max-height: 630px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+    #howItWorks {
+        margin: auto 10px;
+    }
 }
 
 #pricing {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
     margin: 50px auto;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--main-color);
+    border-radius: 3px;
+    flex: 0 1 300px;
+    margin: 10px;
+}
+
+.level {
+    width: 100%;
+    background-color: var(--main-color);
+    color: var(--background-color);
+    padding: 10px;
+}
+
+h3 {
+    margin: 15px;
+}
+
+#pricing li {
+    margin-bottom: 5px;
+}
+
+.no-access {
+    color: var(--no-access-color);
+    text-decoration: line-through;
+}
+
+footer {
+    background-color: var(--main-color);
+    color: var(--background-color);
+    text-align: right;
+    padding: 10px 50px;
 }
 
 footer ul {
@@ -106,6 +215,11 @@ footer ul {
     justify-content: flex-end;
 }
 
-footer {
-    text-align: right;
+footer a {
+    color: var(--background-color);
+    text-decoration: none;
+}
+
+footer span {
+    font-size: 0.8rem;
 }
